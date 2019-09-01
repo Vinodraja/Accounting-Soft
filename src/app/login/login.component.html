@@ -1,0 +1,49 @@
+<style>
+        .mat-card {
+            transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+            display: block;
+            position: relative;
+            padding: 45px;
+            border-radius: 4px;
+            margin-top: 43%;
+        }
+        
+        .mat-card:not([class*=mat-elevation-z]) {
+            box-shadow: 0 2px 50px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+        }
+
+        </style>
+
+<mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <div class="text-center"><span>Accounting Software</span></div>
+        <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Login</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <form class="example-form">
+                    <table class="example-full-width" cellspacing="0">
+                      <tr>
+                        <td>
+                          <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Username"  name="username" required>
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                      <td><mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" type="password" name="password" required>
+                      </mat-form-field></td>
+                    </tr></table>
+                  </form>
+                  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button (click)="Login()" color="primary">Login</button>
+                </mat-card-actions>
+        </mat-card>
+        
+         </mat-toolbar-row>
+         </mat-toolbar>
+         
